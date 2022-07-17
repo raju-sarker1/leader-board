@@ -1,0 +1,269 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Poppins;
+    background-color: #F3F1FF;
+}
+
+:root{
+    --primary-color: #562EFF;
+    --nav-color: #f8f8f8;
+    --mute-color: #d6d6d6;
+}
+
+img{
+    width: 100%;
+}
+
+h3, p{
+    margin: 0;
+}
+
+.main_root{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+ 
+}
+
+.container{
+    max-width: 800px;
+    margin: auto;
+    width: 100%;
+}
+
+section{
+    margin-bottom: 30px;
+    background: #FFFFFF;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.color-mute{
+    color: var(--mute-color);
+}
+
+
+.header{
+    background-color: var(--primary-color);
+    height: 94px;
+    display: flex;
+    align-items: center;
+}
+.header .container{
+    padding: 0 20px;
+}
+
+.top_section{
+    margin-top: 36px;
+}
+
+.logo{
+    color: white;
+    display: flex;
+    align-items: center;
+
+}
+.logo img{
+    width: 40px;
+    margin-right: 5px;
+}
+.main_nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+.menu-btn{
+    display: none;
+}
+.nav_items{
+    display: flex;
+    align-items: center;
+}
+.nav_items li{
+    list-style: none;
+    margin-left: 20px;
+}
+
+.nav_items li a{
+    text-decoration: none;
+    color: var(--nav-color)
+}
+
+.nav_items li img{
+    width: 51px;
+    height: 51px;
+    border-radius: 100%;
+}
+
+hr{
+    border: 1px solid rgba(173, 173, 173, 0.39);
+    margin: 30px 0px;
+}
+
+.top_player_section{}
+
+.top_player_section h1{
+    font-size: 25px;
+    color: var(--primary-color);
+}
+.top_players{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 20px;
+}
+.player{
+    display: flex;
+    align-items: center;
+}
+.player img{
+    width: 56px;
+    height: 56px;
+}
+.player h3{
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 18px;
+}
+
+
+
+.top_blog_section{}
+
+.top_blog_section h1{
+    font-size: 25px;
+    color: var(--primary-color);
+}
+.top_blogs{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 20px;
+}
+
+.blog{
+    display: flex;
+    align-items: flex-start;
+}
+
+.blog .blog_thumbnal{
+    margin-right: 16px;
+    width: 177px;
+    height: 117px;
+}
+.blog .blog_title{
+    font-weight: 500;
+    font-size: 20px;
+}
+.blog .blog_detail p{
+    color: var(--mute-color);
+}
+
+.blog .blog_detail a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+
+
+.latest_course_section{}
+
+.latest_course_section h1{
+    font-size: 25px;
+    color: var(--primary-color);
+}
+.latest_courses{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
+}
+
+.course{
+    display: flex;
+    flex-direction: column;
+    filter: drop-shadow(0px 5.34229px 13.3557px rgba(0, 0, 0, 0.05));
+}
+
+.course .course_thumbnal{
+    margin-right: 16px;
+    width: 177px;
+    height: 117px;
+}
+.course_detail{
+}
+ 
+.course_meta{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    margin-top: 10px;
+}
+.course_duration{
+    background: #FFE4E8;
+    border-radius: 14.6913px;   
+    color: #FF4A60;
+
+    padding: 0 10px;
+}
+.course .blog_title{
+    font-size: 20px;
+    font-weight: 500;
+}
+.course .blog_detail a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+.fa-star{
+    color: rgb(253, 191, 76);
+}
+
+
+
+
+
+
+
+
+/* ---------- media Queries ---------- */
+@media only screen and (max-width: 576px){
+    .menu-btn{
+        display: block;
+        color: white;
+        font-size: 30px;
+    }
+    section{
+        margin: 0 15px;
+    }
+    .nav_items{
+        display: none;
+    }
+
+    .top_players{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .top_players, .latest_courses, .top_blogs{
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 30px;
+        justify-content: center;
+        justify-items: center;
+    }
+   
+    .top_players .player{
+        flex-direction: column;
+    }
+    .top_players .player h3{
+        margin-left: 0;
+    }
+    .top_blogs .blog{
+        flex-direction: column;
+    }
+    .top_blogs .blog .blog_thumbnal,
+    .latest_courses .course_thumbnal
+    {
+        width: 100%;
+        height: auto
+    }
+    
+    
+} 
